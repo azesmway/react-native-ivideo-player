@@ -1,9 +1,10 @@
 
 ## react-native-ivideo-player
 react-native-ivideo-player is a react-native-video based video player component. React Native > 0.40.0 is required.
+<br />This is a fork of <a href="https://github.com/Lizhooh/react-native-ivideo">react-native-ivideo</a>.
 
-<a href="https://www.npmjs.com/package/react-native-ivideo"><img src="https://img.shields.io/npm/v/react-native-ivideo.svg?style=flat-square"></a>
-<a href="https://www.npmjs.com/package/react-native-ivideo"><img src="https://img.shields.io/npm/dm/react-native-ivideo.svg?style=flat-square"></a>
+<a href="https://www.npmjs.com/package/react-native-ivideo-player"><img src="https://img.shields.io/npm/v/react-native-ivideo-player.svg?style=flat-square"></a>
+<a href="https://www.npmjs.com/package/react-native-ivideo-player"><img src="https://img.shields.io/npm/dm/react-native-ivideo-player.svg?style=flat-square"></a>
 
 
 > Currently, the performance is not tested on IOS.
@@ -32,12 +33,12 @@ __Features:__
 
 ### Installation
 
-React-native-ivideo uses react-native-video, react-native-orientation, and react-native-linear-gradient. You need to install these dependencies yourself.
+React-native-ivideo-player uses react-native-video, react-native-orientation, and react-native-linear-gradient. You need to install these dependencies yourself.
 
 installation:
 
 ```bash
-yarn add react-native-ivideo
+yarn add react-native-ivideo-player
 ```
 
 link:
@@ -69,7 +70,7 @@ allprojects {
 ### Usage
 
 ```js
-import IVideo from 'react-native-ivideo';
+import IVideo from 'react-native-ivideo-player';
 
 <IVideo
     source={{ uri: url }}
