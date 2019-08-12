@@ -1,47 +1,49 @@
 
-## react-native-ivideo
-react-native-ivideo 是一个基于 react-native-video 的视频播放组件。需要 React Native > 0.40.0。
+## react-native-ivideo-player
+React-native-ivideo-player is a react-native-video based video playback component. React Native > 0.40.0 is required.
+<br/> This is a fork of <a href="https://github.com/Lizhooh/react-native-ivideo">react-native-ivideo</a>.
 
-<a href="https://www.npmjs.com/package/react-native-ivideo"><img src="https://img.shields.io/npm/v/react-native-ivideo.svg?style=flat-square"></a>
-<a href="https://www.npmjs.com/package/react-native-ivideo"><img src="https://img.shields.io/npm/dm/react-native-ivideo.svg?style=flat-square"></a>
+<a href="https://www.npmjs.com/package/react-native-ivideo-player"><img src="https://img.shields.io/npm/v/react-native-ivideo-player.svg?style=flat-square"></a>
+<a href="https://www.npmjs.com/package/react-native-ivideo-player"><img src="https://img.shields.io/npm/dm/react-native-ivideo-player.svg?style=flat-square"></a>
 
 
-> 目前暂未在  IOS 上测试表现效果。
+> Currently, the performance is not tested on IOS.
 
-__特性：__
-- 基本的播放功能，友好的界面，进度控制，渐出动画，简洁的风格。
-- 细粒度优化，播放时 UI 线程能保持 60 FPS，JS 线程能保持 60 ~ 55 FPS。
-- 提供全屏播放的功能。
-- 支持 MP4，M4A，FMP4，WebM，MKV，MP3，Ogg，WAV，MPEG-TS，MPEG-PS，FLV 和 ADTS（AAC）等格式。
-- 支持 DASH，HlS 和 SmoothStreaming 自适应流。
+__Features：__
+- Basic playback features, friendly interface, progress control, evolving animation, and simple style.
+- Fine-grained optimization, UI threads can maintain 60 FPS during playback, and JS threads can maintain 60 ~ 55 FPS.
+- Provides full-screen playback.
+- Supports formats such as MP4, M4A, FMP4, WebM, MKV, MP3, Ogg, WAV, MPEG-TS, MPEG-PS, FLV and ADTS (AAC).
+- Support DASH, HlS and SmoothStreaming adaptive streaming.
 
 
 <br />
 
-#### 基本的播放功能
+#### Basic playback function
 
 ![](./image/index.png)
 
-#### 全屏播放
+#### Full screen playback
 
 ![](./image/full.gif)
 
-#### 渐出动画
+#### Fade out animation
 
 ![](./image/demo.gif)
 
-### 安装
-react-native-ivideo 使用到了 react-native-video、react-native-orientation、react-native-linear-gradient。你需要自己安装好这些依赖。
+### Installation
+React-native-ivideo uses react-native-video, react-native-orientation, and react-native-linear-gradient. 
+You need to install these dependencies yourself.
 
-模块：
+Package：
 
 ```bash
-yarn add react-native-ivideo
+yarn add react-native-ivideo-player
 # or
-npm install --save react-native-ivideo
+npm install --save react-native-ivideo-player
 ```
 
-链接：
+Link：
 
 ```bash
 react-native link react-native-video
@@ -49,7 +51,7 @@ react-native link react-native-orientation
 react-native link react-native-linear-gradient
 ```
 
-在 `android/build.gradle` 里修改代码：
+In `android/build.gradle` modify the code：
 
 ```js
 allprojects {
@@ -67,10 +69,10 @@ allprojects {
 }
 ```
 
-### 使用
+### Usage
 
 ```js
-import IVideo from 'react-native-ivideo';
+import IVideo from 'react-native-ivideo-player';
 
 <IVideo
     source={{ uri: url }}
@@ -88,70 +90,71 @@ import IVideo from 'react-native-ivideo';
 />
 ```
 
-### 示例
-请查看 [示例代码](./example/index.js)。
+### Example
+Please check [Sample code](./example/index.js)。
 
-### 属性
+### Attributes
 
 | name               | type          | default | description         |
 | :----------------- | :------------ | :------ | :------------------ |
-| width              | number、string | 100%    | 视频的宽度，__必须。__       |
-| height             | number、string | 240     | 视频的高度，__必须。__       |
-| source             | object        | null    | 视频的数据源，__必须。__      |
-| toolbarDuration    | number        | 6000    | 工具栏显示持续时间（ms）。      |
-| toolbarSliderColor | string        | #f90    | 工具栏滑块的颜色。           |
-| title              | string        | ''      | 工具栏显示的标题。           |
-| showFullscreenIcon | bool          | false   | 是否显示全屏按钮。           |
-| showBackIcon       | bool          | true    | 是否显示回退按钮。  |
-| autoPlay           | bool          | false   | 是否在视频初始化完成后就自动开始播放。 |
-| actions            | array         |  [{ text, onPress }]      | 功能组。 |
-| gradientColor      | array         | ['rgba(1, 1, 1, 0.45)', 'rgba(1, 1, 1, 0.24)', 'rgba(1, 1, 1, 0.45)'] | 遮挡层的渐变颜色。 |
+| width              | number、string | 100%    | Width of the video，__Required__       |
+| height             | number、string | 240     | Height of the video，__Required__       |
+| source             | object        | null    | Video data source，__Required__      |
+| toolbarDuration    | number        | 6000    | Toolbar display duration
+（ms）。      |
+| toolbarSliderColor | string        | #f90    | Toolbar slider color。           |
+| title              | string        | ''      | Title。           |
+| showFullscreenIcon | bool          | false   | Whether to display the full screen button。           |
+| showBackIcon       | bool          | true    | Whether to display the back button.  |
+| autoPlay           | bool          | false   | Whether to automatically start playback after the video initialization is completed. |
+| actions            | array         |  [{ text, onPress }]      | Actions |
+| gradientColor      | array         | ['rgba(1, 1, 1, 0.45)', 'rgba(1, 1, 1, 0.24)', 'rgba(1, 1, 1, 0.45)'] | Color gradient shield layer. |
 
 <br />
 
-__映射到 react-native-video 的属性：__
+__Proptypes react-native-video-player：__
 
 | name                   | type   | default | description          |
 | :--------------------- | :----- | :------ | :------------------- |
-| progressUpdateInterval | number | 500     | onProgress 的调用时间差（ms）。  |
-| playInBackground       | bool   | false   | 视频是否在后台播放            |
-| muted                  | bool   | false   | 是否静音。                |
-| rate                   | number | 1.0     | 视频播放的速率。             |
-| repeat                 | bool   | false   | 是否重复循环播放。            |
-| resizeMode             | string | 'cover' | 视频以怎样的方式填充容器。        |
-| useTextureView         | bool   | false   | 是否使用 useTextureView。 |
-| volume                 | number | 1.0     | 视频的声音大小。             |
-| seek                   | number | 0       | 开始播放的位置。             |
+| progressUpdateInterval | number | 500     | onProgress Call time difference（ms）。  |
+| playInBackground       | bool   | false   | Whether the video plays in the background           |
+| muted                  | bool   | false   | Whether it is muted.                |
+| rate                   | number | 1.0     | The rate at which the video plays.             |
+| repeat                 | bool   | false   | Whether to repeat the loop playback.            |
+| resizeMode             | string | 'cover' | How the video fills the container.        |
+| useTextureView         | bool   | false   | use or not useTextureView。 |
+| volume                 | number | 1.0     | The sound size of the video.             |
+| seek                   | number | 0       | The location where the playback starts.             |
 
 <br />
 
-__事件：__
+__Events：__
 
 | name               | type     | default | description      |
 | :----------------- | :------- | :------ | :--------------- |
-| onProgress         | function | d => d  | 视频播放进度事件。        |
-| onBuffer           | function | d => d  | 在视频缓存时触发。        |
-| onLoadStart        | function | e => e  | 在视频加载开始时触发。      |
-| onLoad             | function | d => d  | 在视频加载完成时触发。      |
-| onFullscreen       | function | e => e  | 在视频进入全屏时触发。      |
-| onCancelFullscreen | function | e => e  | 在视频退出全屏时触发。      |
-| onPlay             | function | e => e  | 在视频播放时触发。        |
-| onPause            | function | e => e  | 在视频暂停播放时触发。      |
-| onEnd              | function | e => e  | 在视频播放结束时触发。      |
-| onError            | function | e => e  | 在视频播放/加载发生错误时触发。 |
-| onBack             | function | e => e  | 在点击返回时触发。 |
+| onProgress         | function | d => d  | Video playback progress event.        |
+| onBuffer           | function | d => d  | Fires when the video is cached.        |
+| onLoadStart        | function | e => e  | Fires when the video is loaded.      |
+| onLoad             | function | d => d  | Fires when the video is loaded.      |
+| onFullscreen       | function | e => e  | Fires when the video enters full screen.      |
+| onCancelFullscreen | function | e => e  | Fires when the video exits full screen.      |
+| onPlay             | function | e => e  | Fires when the video plays.        |
+| onPause            | function | e => e  | Fires when the video is paused.      |
+| onEnd              | function | e => e  | Fires when the video ends.      |
+| onError            | function | e => e  | Fires when an error occurs in video playback/loading. |
+| onBack             | function | e => e  | Fires when a click returns. |
 
-### Method
+### Methods
 
 | name               | type     |  description                              |
 | :----------------- | :------- |  :--------------------------------------- |
-| play        | function |  播放视频。      |
-| pause       | function |  暂停视频。        |
-| seek        | function |  改变视频的进度位置。  |
-| replay     | function |  重新播放。      |
+| play        | function |  Play the video.      |
+| pause       | function |  Pause the video。        |
+| seek        | function |  Change the progress position of the video.  |
+| replay     | function |  Replay the video.      |
 
-### 更新日志
--  v2.0.0: 重写代码，修复部分 BUG，新增全屏自适应视频方向。
--  v1.6: 新增加部分共有方法。
--  v1.5: 新增 actions 参数。
+### Update logs
+-  v2.0.0: Rewrite the code, fix some bugs, and add full-screen adaptive video orientation.
+-  v1.6: Newly added partial sharing methods.
+-  v1.5: Added the actions parameter.
 

@@ -1,22 +1,21 @@
 {
-  "name": "react-native-ivideo",
-  "version": "2.0.13",
-  "description": "react-native-ivideo is a react-native-video based video player component.",
+  "name": "react-native-ivideo-player",
+  "version": "2.0.14",
+  "description": "react-native-ivideo-player is a react-native-video based video player component.",
   "main": "index.js",
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react-native-linear-gradient": "2.4.0",
     "react-native-orientation": "^3.1.3",
     "react-native-video": "^3.1.0",
     "styled-components": "^3.4.10"
   },
   "author": {
-    "name": "lizhooh",
-    "email": "lizhoohs@foxmail.com"
+    "name": "yazmani",
+    "email": "yas.azmani@gmail.com"
   },
   "license": "MIT",
   "keywords": [
-    "react-native-ivideo",
+    "react-native-ivideo-player",
     "react-native-video",
     "react-native-video-play",
     "video",
@@ -24,6 +23,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Lizhooh/react-native-ivideo"
+    "url": "https://github.com/yazmani/react-native-ivideo"
   }
 }
