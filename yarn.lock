@@ -131,10 +131,9 @@ react-native-orientation@^3.1.3:
   version "3.1.3"
   resolved "http://registry.npm.taobao.org/react-native-orientation/download/react-native-orientation-3.1.3.tgz#d45803841fe94b6cce9acbe904fd5ca191a3711e"
 
-react-native-video@^5.0.0:
+react-native-video@yazmani/react-native-video:
   version "5.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-video/-/react-native-video-5.0.0.tgz#30b58e31f0776bfa8dc71109c25114d4e50d9209"
-  integrity sha512-nSG7Zkc0SE2Pa/sKWvMEPUc9Zlo0iVOFTac0GcXd/U5vTsm4L28leQzJ8K/s+Yc5xfCYaeb9bIWROqw2oiB9Ig==
+  resolved "https://codeload.github.com/yazmani/react-native-video/tar.gz/f19311e68abed5c89dbc887ac9aefc50c03a3e29"
   dependencies:
     keymirror "^0.1.1"
     prop-types "^15.5.10"
